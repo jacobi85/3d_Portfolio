@@ -1,3 +1,4 @@
+import GlowCard from "../components/GlowCard";
 import TitleHeader from "../components/TitleHeader";
 import { expCards } from "../constants/";
 
@@ -16,7 +17,13 @@ const ExperienceSection = () => {
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card) => (
               <div className="exp-card-wrapper" key={card.title}>
-                {card.title}
+                <div className="xl:w-2/6">
+                  <GlowCard card={card}>
+                    <div>
+                      <img src={card.imgPath} alt={card.title} />
+                    </div>
+                  </GlowCard>
+                </div>
               </div>
             ))}
           </div>
